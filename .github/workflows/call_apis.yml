@@ -8,7 +8,7 @@ on:
     tags:
       - 'v*'
   schedule:
-    - cron: "9 */2 * * *"
+    - cron: "30 * * * *"
   workflow_dispatch:
   watch:
     types: [started]
