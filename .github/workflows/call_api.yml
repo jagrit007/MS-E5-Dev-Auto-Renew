@@ -1,5 +1,5 @@
 # Automatically call APIs
-name: Call APIs
+name: Call APIs for Iemdarth
 
 on: 
   release:
