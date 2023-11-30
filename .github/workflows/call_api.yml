@@ -1,5 +1,5 @@
 # Automatically call APIs
-name: Call APIs
+name: Call APIs second
 
 on: 
   release:
@@ -40,7 +40,7 @@ jobs:
       id: get_access_token_step
       run: |
         echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
-        ms_tokens_output=$(python3 ms_tokens.py ${{ secrets.CONFIG_ID_TWO }} ${{ secrets.CONFIG_KEY_TWO }} ${{ secrets.REFRESH_TOKEN_TWO }} ${{ secrets.GH_TOKEN }} ${{ github.repository }})
+        ms_tokens_output=$(python3 ms_tokens.py ${{ secrets.CONFIG_ID }} ${{ secrets.CONFIG_KEY }} ${{ secrets.REFRESH_TOKEN_TWO }} ${{ secrets.GH_TOKEN }} ${{ github.repository }})
         echo "$ms_tokens_output"
         echo "access_token=$(echo "$ms_tokens_output" | sed -n '$p')" >> "$GITHUB_OUTPUT"
     - name: Call APIs
